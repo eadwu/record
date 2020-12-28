@@ -1,7 +1,5 @@
 module Main
 ( main ) where
-  import System.IO ( readFile )
-
   main :: IO ()
   main = do
     fileLines <- map (read :: String -> Int) . lines <$> readFile "input.txt" -- <$> = fmap (Functor map)
