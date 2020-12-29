@@ -71,9 +71,9 @@ nixpkgs_python_configure(
 load("@rules_haskell//haskell:nixpkgs.bzl", "haskell_register_ghc_nixpkgs")
 
 haskell_register_ghc_nixpkgs(
-    attribute_path = "haskell.compiler.ghc8102",
+    attribute_path = "haskell.compiler.ghc8101",
     repositories = {"nixpkgs": "@nixpkgs_default"},
-    version = "8.10.2",
+    version = "8.10.1",
 )
 
 ## ghcide
