@@ -87,7 +87,7 @@ nixpkgs_package(
 http_archive(
     name = "nixpkgs-mozilla",
     build_file_content = """
-package(default_visibility = [ "//visibility:public" ])
+package(default_visibility = ["//visibility:public"])
 
 filegroup(
     name = "out",
