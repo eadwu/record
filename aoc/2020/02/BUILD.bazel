@@ -1,15 +1,9 @@
-load(
-    "@rules_haskell//haskell:defs.bzl",
-    "haskell_binary",
-    "haskell_toolchain_library",
-)
-
-haskell_toolchain_library(name = "base")
+load("@rules_haskell//haskell:defs.bzl", "haskell_binary")
 
 haskell_binary(
     name = "202002hs",
     srcs = ["src/Main.hs"],
     deps = [
-        ":base",
+        "//deps/hackage:base",
     ],
 )
