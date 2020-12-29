@@ -3,7 +3,10 @@ load("@rules_haskell//haskell:defs.bzl", "haskell_binary")
 haskell_binary(
     name = "202001hs",
     srcs = ["src/Main.hs"],
+    extra_srcs = ["input.txt"],
     deps = [
         "//deps/hackage:base",
+        "//deps/hackage:template-haskell",
+        "//utils:EmbedIO",
     ],
 )
