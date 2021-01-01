@@ -1,1 +1,6 @@
+# Bazel
 bazel-*
+
+# HackerRank
+## Test cases
+*.zip
