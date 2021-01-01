@@ -3,24 +3,13 @@ sh_binary(
     srcs = ["main.sh"],
 )
 
-sh_library(
-    name = "3330_lib",
-    data = [
-        ":3330",
-    ],
-)
+load("//:hackerrank/utils.bzl", "generic_hackerrank_test")
 
-sh_test(
-    name = "3330_test",
-    size = "small",
-    srcs = ["//hackerrank/generic:test.sh"],
-    args = [
-        "3330",
-        "hackerrank/3330",
-    ],
+generic_hackerrank_test(
+    name = "_3330",
     data = glob([
         "input/*.txt",
         "output/*.txt",
     ]),
-    deps = [":3330_lib"],
+    problem_id = "3330",
 )
