@@ -1,0 +1,26 @@
+sh_binary(
+    name = "3330",
+    srcs = ["main.sh"],
+)
+
+sh_library(
+    name = "3330_lib",
+    data = [
+        ":3330",
+    ],
+)
+
+sh_test(
+    name = "3330_test",
+    size = "small",
+    srcs = ["//hackerrank/generic:test.sh"],
+    args = [
+        "3330",
+        "hackerrank/3330",
+    ],
+    data = glob([
+        "input/*.txt",
+        "output/*.txt",
+    ]),
+    deps = [":3330_lib"],
+)
