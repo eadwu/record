@@ -11,6 +11,17 @@ haskell_binary(
     ],
 )
 
+haskell_binary(
+    name = "915XOR",
+    srcs = ["XOR.hs"],
+    deps = [
+        "//deps/ghc:array",
+        "//deps/ghc:base",
+        "//deps/ghc:containers",
+        "@stackage//:split",
+    ],
+)
+
 load("//:hackerrank/utils.bzl", "generic_hackerrank_test")
 
 generic_hackerrank_test(
@@ -21,4 +32,14 @@ generic_hackerrank_test(
     ]),
     problem_id = "915",
     target = "915hs",
+)
+
+generic_hackerrank_test(
+    name = "_915_XOR",
+    data = glob([
+        "input/*.txt",
+        "output/*.txt",
+    ]),
+    problem_id = "915",
+    target = "915XOR",
 )
