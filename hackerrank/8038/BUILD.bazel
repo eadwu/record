@@ -1,0 +1,18 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "8038",
+    srcs = ["main.cpp"],
+)
+
+load("//:hackerrank/utils.bzl", "generic_hackerrank_test")
+
+generic_hackerrank_test(
+    name = "_8038",
+    data = glob([
+        "input/*.txt",
+        "output/*.txt",
+    ]),
+    problem_id = "8038",
+    target = "8038",
+)
