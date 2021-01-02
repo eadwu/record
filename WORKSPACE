@@ -78,6 +78,34 @@ nixpkgs_package(
     repository = "@nixpkgs_default",
 )
 
+## Project configuration
+load("@rules_haskell//haskell:cabal.bzl", "stack_snapshot")
+
+stack_snapshot(
+    name = "stackage",
+    packages = [
+        # Core libraries
+        "array",
+        "base",
+        "binary",
+        "bytestring",
+        "containers",
+        "deepseq",
+        "directory",
+        "filepath",
+        "mtl",
+        "template-haskell",
+        "transformers",
+        "ghc-prim",
+        "process",
+        "rts",
+        "text",
+        # External libraries
+        "split-0.2.3.4",
+    ],
+    snapshot = "nightly-2020-08-16",
+)
+
 # Setup Rust compiler through Nix
 http_archive(
     name = "nixpkgs-mozilla",
