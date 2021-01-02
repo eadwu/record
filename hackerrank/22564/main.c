@@ -13,7 +13,7 @@ char* readline();
  */
 int pageCount(int n, int p) {
     int fromStart = (int) floor(p / 2);
-    int fromEnd = (int) floor((n - p) / 2);
+    int fromEnd = (int) floor(n / 2) - fromStart;
     return fromStart < fromEnd ? fromStart : fromEnd;
 }
 
