@@ -2,15 +2,11 @@ load("@rules_haskell//haskell:defs.bzl", "haskell_binary")
 
 haskell_binary(
     name = "202005hs",
-    srcs = [
-        "src/Main.hs",
-    ],
-    extra_srcs = [
-        "input.txt",
-    ],
+    srcs = ["Main.hs"],
+    extra_srcs = ["input.txt"],
     deps = [
-        "//deps/hackage:base",
-        "//deps/hackage:template-haskell",
-        "//utils:EmbedIO",
+        "//aoc/utils:EmbedIO",
+        "//deps/ghc:base",
+        "//deps/ghc:template-haskell",
     ],
 )

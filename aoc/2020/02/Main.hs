@@ -32,7 +32,7 @@ filter'' (Rule l' r' target pwd) = (tl == target || tr == target) && tl /= tr
 
 main :: IO ()
 main = do
-  let parsed = map parseLine . lines $ $(embedFile "2020/02/input.txt")
+  let parsed = map parseLine . lines $ $(embedFile "aoc/2020/02/input.txt")
   print . length $ filter filter' parsed  -- Part One
   print . length $ filter filter'' parsed -- Part Two
 

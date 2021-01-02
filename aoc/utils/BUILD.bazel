@@ -6,7 +6,7 @@ haskell_library(
     name = "EmbedIO",
     srcs = ["EmbedIO.hs"],
     deps = [
-        "//deps/hackage:base",
-        "//deps/hackage:template-haskell",
+        "//deps/ghc:base",
+        "//deps/ghc:template-haskell",
     ],
 )

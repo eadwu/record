@@ -4,7 +4,7 @@ import EmbedIO
 import Data.List ( nub, intersect )
 
 input :: String
-input = $(embedFile "2020/06/input.txt")
+input = $(embedFile "aoc/2020/06/input.txt")
 
 unlines' :: [String] -> String
 unlines' [] = []

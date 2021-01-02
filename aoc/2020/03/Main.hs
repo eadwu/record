@@ -3,7 +3,7 @@
 import EmbedIO
 
 input :: String
-input = $(embedFile "2020/03/input.txt")
+input = $(embedFile "aoc/2020/03/input.txt")
 
 everyN :: Int -> [a] -> [a]
 everyN n []     = []

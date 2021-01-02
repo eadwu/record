@@ -4,7 +4,7 @@ import EmbedIO
 import Data.List ( sort, maximum )
 
 input :: String
-input = $(embedFile "2020/05/input.txt")
+input = $(embedFile "aoc/2020/05/input.txt")
 
 parseCol :: String -> Int -> Int -> Int
 parseCol [] l r = l
