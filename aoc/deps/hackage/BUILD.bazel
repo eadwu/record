@@ -1,0 +1,26 @@
+package(default_visibility = ["//visibility:public"])
+
+## Haskell base libraries
+### https://github.com/tweag/rules_haskell/blob/e8623a8c5ea502fbe6286d8ae5fb58f4915e92c5/tests/hackage/BUILD.bazel
+load("@rules_haskell//haskell:defs.bzl", "haskell_toolchain_library")
+
+[
+    haskell_toolchain_library(name = lib)
+    for lib in [
+        "array",
+        "base",
+        "binary",
+        "bytestring",
+        "containers",
+        "deepseq",
+        "directory",
+        "filepath",
+        "mtl",
+        "template-haskell",
+        "transformers",
+        "ghc-prim",
+        "process",
+        "rts",
+        "text",
+    ]
+]

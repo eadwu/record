@@ -1,0 +1,12 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@rules_haskell//haskell:defs.bzl", "haskell_library")
+
+haskell_library(
+    name = "EmbedIO",
+    srcs = ["EmbedIO.hs"],
+    deps = [
+        "//deps/hackage:base",
+        "//deps/hackage:template-haskell",
+    ],
+)
