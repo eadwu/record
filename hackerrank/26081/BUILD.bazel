@@ -14,4 +14,5 @@ generic_hackerrank_test(
         "output/*.txt",
     ]),
     problem_id = "26081",
+    target = "26081",
 )

@@ -1,19 +1,17 @@
-def generic_hackerrank_test(name, problem_id, data):
+def generic_hackerrank_test(name, data, problem_id, target):
     native.sh_library(
-        name = problem_id + "_lib",
-        data = [
-            ":" + problem_id,
-        ],
+        name = target + "_lib",
+        data = [":" + target],
     )
 
     native.sh_test(
-        name = problem_id + "_test",
+        name = target + "_test",
         size = "small",
         srcs = ["//hackerrank/generic:test.sh"],
         args = [
-            problem_id,
+            target,
             "hackerrank/" + problem_id,
         ],
         data = data,
-        deps = [":" + problem_id + "_lib"],
+        deps = [":" + target + "_lib"],
     )
