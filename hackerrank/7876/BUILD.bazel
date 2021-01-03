@@ -1,0 +1,17 @@
+py_binary(
+    name = "7876",
+    srcs = ["main.py"],
+    main = "main.py",
+)
+
+load("//:hackerrank/utils.bzl", "generic_hackerrank_test")
+
+generic_hackerrank_test(
+    name = "_7876",
+    data = glob([
+        "input/*.txt",
+        "output/*.txt",
+    ]),
+    problem_id = "7876",
+    target = "7876",
+)
