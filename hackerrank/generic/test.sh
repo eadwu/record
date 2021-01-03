@@ -14,5 +14,5 @@ for file in input/*.txt; do
 
   export OUTPUT_PATH="_output/$filename.txt"
   cat "$file" | $EXE &> "_output/$filename.txt"
-  diff --ignore-trailing-space "output/$output" "_output/$filename.txt" || exit 1
+  diff --side-by-side --ignore-trailing-space "output/$output" "_output/$filename.txt" || exit 1
 done
