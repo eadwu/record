@@ -1,0 +1,25 @@
+load("@rules_haskell//haskell:defs.bzl", "haskell_binary")
+
+haskell_binary(
+    name = "20055hs",
+    srcs = ["Main.hs"],
+    deps = [
+        "//deps/ghc:array",
+        "//deps/ghc:base",
+        "//deps/ghc:containers",
+        "//deps/ghc:text",
+        "@stackage//:split",
+    ],
+)
+
+load("//:hackerrank/utils.bzl", "generic_hackerrank_test")
+
+generic_hackerrank_test(
+    name = "_20055",
+    data = glob([
+        "input/*.txt",
+        "output/*.txt",
+    ]),
+    problem_id = "20055",
+    target = "20055hs",
+)
