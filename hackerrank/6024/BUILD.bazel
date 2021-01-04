@@ -1,0 +1,24 @@
+load("@rules_haskell//haskell:defs.bzl", "haskell_binary")
+
+haskell_binary(
+    name = "6024hs",
+    srcs = ["Main.hs"],
+    deps = [
+        "//deps/ghc:array",
+        "//deps/ghc:base",
+        "//deps/ghc:containers",
+        "@stackage//:split",
+    ],
+)
+
+load("//:hackerrank/utils.bzl", "generic_hackerrank_test")
+
+generic_hackerrank_test(
+    name = "_6024",
+    data = glob([
+        "input/*.txt",
+        "output/*.txt",
+    ]),
+    problem_id = "6024",
+    target = "6024hs",
+)
