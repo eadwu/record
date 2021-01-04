@@ -15,9 +15,9 @@ import System.IO.Unsafe
 
 -- Complete the angryProfessor function below.
 angryProfessor k a
-  | late < k  = "YES"
-  | otherwise = "NO"
-  where late = length $ Data.List.filter (> 0) a
+  | students >= k = "NO"
+  | otherwise     = "YES"
+  where students = length $ Data.List.filter (<= 0) a
 
 readMultipleLinesAsStringArray :: Int -> IO [String]
 readMultipleLinesAsStringArray 0 = return []
