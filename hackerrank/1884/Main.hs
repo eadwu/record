@@ -14,8 +14,8 @@ import System.IO
 import System.IO.Unsafe
 
 -- Complete the circularArrayRotation function below.
-circularArrayRotation a k queries = fmap (\i -> a !! ((start + i) `mod` length queries)) queries
-    where start = length queries - k
+circularArrayRotation a k queries = fmap (\i -> a !! ((start + i) `mod` length a)) queries
+    where start = length a - (k `mod` length a)
 
 readMultipleLinesAsStringArray :: Int -> IO [String]
 readMultipleLinesAsStringArray 0 = return []
