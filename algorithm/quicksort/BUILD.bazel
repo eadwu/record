@@ -1,0 +1,10 @@
+load("@rules_haskell//haskell:defs.bzl", "haskell_binary")
+
+haskell_binary(
+    name = "QuickSort",
+    srcs = ["QuickSort.hs"],
+    main_function = "QuickSort.main",
+    deps = [
+        "//deps/ghc:base",
+    ],
+)
