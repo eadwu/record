@@ -14,19 +14,19 @@ http_archive(
 
 http_archive(
     name = "rules_haskell",
-    sha256 = "2be56a49ad6124a3f5b8061d43930fc992ddc876a1cd75d955449161e639649b",
-    strip_prefix = "rules_haskell-32df21ab2d6e5338e972e576ecace43cb1d362ff",  # 2020-12-31
+    sha256 = "d8bc321ba774e615414b08c28dad5874a625fa6f34ea6d82ee046633da146977",
+    strip_prefix = "rules_haskell-07390ba8381284a85fb1de3367b1f406e6714374",  # 2021-01-18
     urls = [
-        "https://github.com/tweag/rules_haskell/archive/32df21ab2d6e5338e972e576ecace43cb1d362ff.tar.gz",
+        "https://github.com/tweag/rules_haskell/archive/07390ba8381284a85fb1de3367b1f406e6714374.tar.gz",
     ],
 )
 
 http_archive(
     name = "io_bazel_rules_rust",
-    sha256 = "cae37240fa3a529a330dab17271899376636e07e1e9d31b964109cd60cb60e35",
-    strip_prefix = "rules_rust-78ac316a460c8e86739ebff975e23902b7a1800b",  # 2020-12-30
+    sha256 = "ec55addb128fc5fe30409471598e555e2200cc2e78916485bdea9b2c666f89ef",
+    strip_prefix = "rules_rust-8c388e1b816d0a7e5a7d3cc5d213be7f35299cf5",  # 2021-01-18
     urls = [
-        "https://github.com/bazelbuild/rules_rust/archive/78ac316a460c8e86739ebff975e23902b7a1800b.tar.gz",
+        "https://github.com/bazelbuild/rules_rust/archive/8c388e1b816d0a7e5a7d3cc5d213be7f35299cf5.tar.gz",
     ],
 )
 
@@ -49,7 +49,7 @@ load(
 
 nixpkgs_git_repository(
     name = "nixpkgs_default",
-    revision = "cc9e751b22083151ce8f575d509cc36c3018b0f6",  # NixOS/nixpkgs@master, 2020-12-31
+    revision = "88f00e7e12d2669583fffd3f33aae01101464386",  # NixOS/nixpkgs@nixos-20.09, 2021-01-18
 )
 
 nixpkgs_cc_configure(
