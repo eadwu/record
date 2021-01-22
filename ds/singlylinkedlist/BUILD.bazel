@@ -1,0 +1,9 @@
+load("@rules_haskell//haskell:defs.bzl", "haskell_library")
+
+haskell_library(
+    name = "SinglyLinkedList",
+    srcs = ["SinglyLinkedList.hs"],
+    deps = [
+        "//deps/ghc:base",
+    ],
+)
