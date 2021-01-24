@@ -1,0 +1,9 @@
+load("@rules_haskell//haskell:defs.bzl", "haskell_library")
+
+haskell_library(
+    name = "TypeClasses",
+    srcs = ["TypeClasses.hs"],
+    deps = [
+        "//deps/ghc:base",
+    ],
+)
